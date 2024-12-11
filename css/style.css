@@ -279,7 +279,7 @@ li a {
 
 .boble-text1 {
     margin-left: 10%;
-    margin-top: 20px;
+    margin-top: 10%;
 }
 
 .boble-text2 {
@@ -409,8 +409,60 @@ li a {
     object-position: 50% 40%;
 }
 
-#gorgeous{
+#gorgeous {
     object-position: 50% 50%;
+}
+
+/* ---------------------------------VÆLG VARER CSS-----------------------------------------*/
+
+.vare-antal {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.vare-antal button {
+    width: 30px;
+    height: 30px;
+}
+
+.vare-antal input {
+    width: 50px;
+    text-align: center;
+}
+
+.light-pink {
+    background-color: #FFADE8;
+}
+
+.button-pink {
+    background-color: #FFADE8;
+    align-content: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 30px;
+    color: #79099D;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+.form-hd {
+    font-family: "futura-pt", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2rem;
+    color: rgba(1, 26, 77, 1);
+}
+
+label {
+    font-family: "futura-pt", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    color: rgba(1, 26, 77, 1);
+    margin-top: 1rem;
 }
 
 /* ---------------------------------FOOTER CSS-----------------------------------------*/
@@ -482,9 +534,8 @@ footer {
     padding: 0.5rem;
 }
 
-/* Media queries */
+/* ------------------------------------------------Media queries ------------------------------------------------*/
 @media only screen and (min-width: 992px) {
-
     .row-pc {
         display: flex;
         flex-direction: row;
@@ -492,7 +543,12 @@ footer {
         flex-wrap: wrap;
     }
 
-
+    .column-pc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     /* Grid for index.html */
     .grid-container-index {
@@ -526,6 +582,14 @@ footer {
         margin-left: 5rem;
     }
 
+    .pass {
+        grid-template-areas:
+            "velkomst velkomst velkomst velkomst sidebar"
+            "text1 text1 img1 img1 sidebar"
+            "sponsor sponsor sponsor sponsor sidebar";
+        grid-row-gap: 2rem;
+    }
+
     .img-frame {
         width: 100%;
         height: 100%;
@@ -537,7 +601,6 @@ footer {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        /* Add this line */
     }
 
     .index-frame {
@@ -632,7 +695,7 @@ footer {
         border-bottom-right-radius: 500px;
     }
 
-    /* Nav */
+    /* --------------------------------------------- Nav -----------------------------------------------------*/
     .navigation {
         align-items: flex-end;
     }
@@ -680,7 +743,7 @@ footer {
         width: fit-content;
     }
 
-    /* Index bubbles */
+    /* ------------------------------------------ Index bubbles ----------------------------------------------*/
     .boble1 {
         background: transparent;
         width: 100%;
@@ -730,7 +793,11 @@ footer {
         padding: 2rem;
     }
 
-    /* Text */
+    .line-pink {
+        border: 2px solid rgba(255, 87, 207, 1);
+    }
+
+    /* -----------------------------------------------------Text -----------------------------------------------------*/
     h2 {
         font-size: 5rem;
     }
@@ -742,7 +809,7 @@ footer {
         margin-bottom: 2rem;
     }
 
-    /* Events */
+    /* -----------------------------------------------------Events -----------------------------------------------------*/
     .event-box {
         flex-direction: column;
         align-items: center;
@@ -756,6 +823,23 @@ footer {
 
     .event-info {
         height: 178px;
+    }
+
+    /* -----------------------------------------------------RadarPass -----------------------------------------------------*/
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 5rem;
+        background: linear-gradient(180deg, rgba(255, 178, 233, 1) 0%, rgba(255, 87, 207, 1) 32%, rgba(189, 21, 144, 1) 50%, rgba(121, 9, 157, 1) 100%);
+    }
+
+    .form-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
     /* Footer */
