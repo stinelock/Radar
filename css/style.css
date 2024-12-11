@@ -23,14 +23,25 @@ a {
     justify-content: space-between;
 }
 
-/* Text CSS */
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dark-blue-bg {
+    background-color: rgba(1, 26, 77, 1);
+}
+
+
+/* ----------------------Text CSS -----------------------*/
 /* Futura Bold */
 h1 {
     color: rgba(1, 26, 77, 1);
     font-family: "futura-pt-bold", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: clamp(3rem, 5vw, 5rem);
+    font-size: clamp(4rem, 10vw, 6rem);
 }
 
 /* Futura Bold */
@@ -110,6 +121,11 @@ p {
     align-items: flex-end;
 }
 
+.center-text {
+    text-align: center;
+    align-items: center;
+}
+
 .pink {
     color: rgba(255, 87, 207, 1);
 }
@@ -118,7 +134,7 @@ p {
     display: none;
 }
 
-/* Nav section */
+/* --------------------Nav section-------------------- */
 header {
     position: sticky;
     top: 0;
@@ -167,7 +183,8 @@ li a {
 /* Mobile nav-bar */
 .nav-bar {
     position: absolute;
-    top: 0; /* Ensure it starts from the top */
+    top: 0;
+    /* Ensure it starts from the top */
     left: 0;
     transform: translateY(-100%);
     list-style: none;
@@ -175,17 +192,18 @@ li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Set height to 100% of the viewport height */
+    height: 100vh;
+    /* Set height to 100% of the viewport height */
     width: 100%;
-    background-color: rgba(1, 26, 77, 1);
     text-align: center;
     overflow-x: hidden;
-    transition: transform 0.5s ease-out; /* Add transition for smooth scrolling */
 }
 
-/* Move nav-bar down when active */
+
 .nav-active {
     transform: translateY(0);
+    transition: transform 0.5s ease-out;
+
 }
 
 .nav-bar.nav-active .pc-none {
@@ -218,7 +236,7 @@ li a {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Main section */
+/*-------------------------- Main section----------------------- */
 .indexlogo {
     width: 60%;
     height: auto;
@@ -234,7 +252,7 @@ li a {
 }
 
 #velkomst-text {
-font-size: clamp(2.5rem, 4vw, 4rem);
+    font-size: clamp(2.5rem, 4vw, 4rem);
 }
 
 .boble1 {
@@ -274,11 +292,6 @@ font-size: clamp(2.5rem, 4vw, 4rem);
     height: auto;
 }
 
-.event-card {
-    display: flex;
-    flex-direction: column;
-    margin:10% 15%;
-}
 
 .emblem {
     width: 35%;
@@ -328,7 +341,65 @@ font-size: clamp(2.5rem, 4vw, 4rem);
     background-position: center center;
 }
 
-/* Footer */
+/*----------------------------EVENTS CSS------------------------------------------------*/
+.event-card {
+    display: flex;
+    flex-direction: column;
+    margin: 10% 15%;
+}
+
+.event-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 100%;
+}
+
+.event-frame {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.events-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 25%;
+    z-index: 1;
+}
+
+.event-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem;
+    width: 100%;
+    position: relative;
+}
+
+.date {
+    display: flex;
+    padding: 1rem;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.foto-text {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    padding-top: 1rem;
+}
+
+/* ---------------------------------FOOTER CSS-----------------------------------------*/
 .sponsor {
     display: flex;
     flex-wrap: wrap;
@@ -340,7 +411,7 @@ font-size: clamp(2.5rem, 4vw, 4rem);
     grid-area: sponsor;
 }
 
-.sponsor-link{
+.sponsor-link {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -357,6 +428,7 @@ font-size: clamp(2.5rem, 4vw, 4rem);
     height: auto;
     object-fit: contain;
 }
+
 footer {
     position: relative;
     bottom: 0;
@@ -367,7 +439,6 @@ footer {
     width: 100%;
     height: auto;
     padding: 20px;
-    background-color: rgba(1, 26, 77, 1);
     color: rgba(255, 87, 207, 1);
 }
 
@@ -399,6 +470,15 @@ footer {
 
 /* Media queries */
 @media only screen and (min-width: 992px) {
+
+    .row-pc {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
 
     /* Grid for index.html */
     .grid-container-index {
@@ -646,6 +726,18 @@ footer {
         top: 106px;
         margin-top: 2rem;
         margin-bottom: 2rem;
+    }
+
+    /* Events */
+    .event-box {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1 1 50%;
+    }
+
+    .events-img {
+        display: block
     }
 
     /* Footer */
