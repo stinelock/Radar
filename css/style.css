@@ -296,6 +296,7 @@ li a {
 .emblem {
     width: 35%;
     height: auto;
+    z-index: 4;
 }
 
 .emblem a {
@@ -351,9 +352,9 @@ li a {
 .event-box {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     flex: 1 1 100%;
+    height: 100%;
 }
 
 .event-frame {
@@ -378,11 +379,14 @@ li a {
     align-items: flex-start;
     padding: 2rem;
     width: 100%;
+    height: 100%;
     position: relative;
 }
 
 .date {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
     border-top-left-radius: 100%;
     border-top-right-radius: 100%;
@@ -390,6 +394,7 @@ li a {
     position: absolute;
     right: 0;
     bottom: 0;
+    width: 5rem;
 }
 
 .foto-text {
@@ -397,6 +402,15 @@ li a {
     right: 1rem;
     bottom: 1rem;
     padding-top: 1rem;
+    font-size: clamp(0.5rem, 1vw, 1rem);
+}
+
+#clothingclub {
+    object-position: 50% 40%;
+}
+
+#gorgeous{
+    object-position: 50% 50%;
 }
 
 /* ---------------------------------FOOTER CSS-----------------------------------------*/
@@ -731,13 +745,17 @@ footer {
     /* Events */
     .event-box {
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
         flex: 1 1 50%;
+        height: 100%;
     }
 
     .events-img {
         display: block
+    }
+
+    .event-info {
+        height: 178px;
     }
 
     /* Footer */
