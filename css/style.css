@@ -535,7 +535,7 @@ footer {
 }
 
 /* ------------------------------------------------Media queries ------------------------------------------------*/
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
     .row-pc {
         display: flex;
         flex-direction: row;
@@ -695,52 +695,8 @@ footer {
         border-bottom-right-radius: 500px;
     }
 
-    /* --------------------------------------------- Nav -----------------------------------------------------*/
-    .navigation {
-        align-items: flex-end;
-    }
-
-    .nav-bar {
-        position: relative;
-        transform: none;
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-end;
-        padding-top: 0;
-        padding-bottom: 0;
-        width: auto;
-        height: auto;
-        background-color: transparent;
-    }
-
-    .nav-button {
+    .pc-none{
         display: none;
-    }
-
-    .nav-cta {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    #nav-cta {
-        margin: 5px;
-    }
-
-    .pc-none {
-        display: none;
-    }
-
-    li a {
-        font-size: 1.5rem;
-        margin: 10px;
-        width: fit-content;
-    }
-
-    a {
-        width: fit-content;
     }
 
     /* ------------------------------------------ Index bubbles ----------------------------------------------*/
@@ -861,3 +817,53 @@ footer {
         flex-direction: row;
     }
 }
+
+@media only screen and (min-width: 992px) {
+    /* --------------------------------------------- Nav -----------------------------------------------------*/
+    .navigation {
+       align-items: flex-end;
+   }
+   
+   .nav-bar {
+       position: relative;
+       transform: none;
+       list-style: none;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       align-items: flex-end;
+       padding-top: 0;
+       padding-bottom: 0;
+       width: auto;
+       height: auto;
+       background-color: transparent;
+   }
+   
+   .nav-button {
+       display: none;
+   }
+   
+   .nav-cta {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+   }
+   
+   #nav-cta {
+       margin: 5px;
+   }
+   
+   .nav-pc-none {
+       display: none;
+   }
+   
+   li a {
+       font-size: 1.5rem;
+       margin: 10px;
+       width: fit-content;
+   }
+   
+   a {
+       width: fit-content;
+   }
+   }

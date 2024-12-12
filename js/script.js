@@ -23,3 +23,6 @@ document.getElementById('minus').addEventListener('click', function() {
         items.value = parseInt(items.value) - 1; /*når click bliver antal -1 */
     }
 });
+
+
+/**----------------- Betalingsformular--------------------------- */

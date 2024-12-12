@@ -22,10 +22,10 @@
             <a href="index.html" title="Forside"><img class="logo" src="img/Logopink.png" alt="Resonans logo"></a>
             <!-- Navigation links -->
             <ul class="nav-bar dark-blue-bg" id="nav-bar">
-                <li class="pc-none"><a href="index.html" title="Events">Forside</a></li>
+                <li class="nav-pc-none"><a href="index.html" title="Events">Forside</a></li>
                 <li><a href="events.html" title="Events">Events</a></li>
-                <li class="pc-none"><a href="frivillig.html" title="Bliv Frivillig">Bliv Frivillig</a></li>
-                <li class="pc-none"><a href="pass.html" title="Få RadarPass">Få RadarPass</a></li>
+                <li class="nav-pc-none"><a href="frivillig.html" title="Bliv Frivillig">Bliv Frivillig</a></li>
+                <li class="nav-pc-none"><a href="pass.html" title="Få RadarPass">Få RadarPass</a></li>
                 <li><a href="minder.html" title="RadarMinder">RadarMinder</a></li>
                 <li><a href="fundament.html" title="Vores Fundament">Vores Kerne</a></li>
             </ul>
@@ -57,8 +57,21 @@
         <!------------------------------------------Det får du------------------------------------------->
         <section class="boble1 text1">
 
-            <h3 class="right pc-left sub-hd">DET FÅR DU</h3>
+            <h3 class="right pc-left sub-hd">DINE OPLYSNINGER</h3>
             <div class="main-text boble-text1">
+                <h4>
+                    <br>
+                    <p>Navn:
+                        <?php echo $_POST["name"]; ?>
+                    </p>
+                    <p>Kortnummer:
+                        <?php echo $_POST["kortnummer"]; ?>
+                    </p>
+                    <p>CVV:
+                        <?php echo $_POST["CVV"]; ?>
+                    </p>
+
+                </h4>
                 <p> Med et RadarPass kan får du:</p>
                 <br>
                 <ul class="list">
@@ -82,30 +95,27 @@
             </div>
         </section>
         <!------------------------------------------PC: VÆLG VARE------------------------------------------->
-        <form action="betaling.html" method="post" class="column-pc tlf-none form top-radius img1">
+        <form action="tillykke.html" method="post" class="column-pc tlf-none form top-radius img1">
             <div class="form-content">
-                <label class="form-hd" for="items">Antal varer</label>
-                <div class="vare-antal">
-                    <button class="button-pink" type="button" id="minus">-</button>
-                    <input class="light-pink" type="number" id="items" name="items" value="1" min="1" max="4" required>
-                    <button class="button-pink" type="button" id="plus">+</button>
-                </div>
-    
-                <label for="name">Navn:</label>
+
+                <label for="name">Navn på kort:</label>
                 <input class="light-pink" type="text" id="name" name="name" required>
-    
-                <label for="birthdate">Fødselsdato:</label>
-                <input class="light-pink" type="date" id="birthdate" name="birthdate" required>
-    
-                <label for="email">Email:</label>
-                <input class="light-pink" type="email" id="email" name="email" required>
-    
-                <button class="button" type="submit">Gå til betaling</button>
+
+                <label for="birthdate">Kortnummer:</label>
+                <input class="light-pink" type="text" id="kortnummer" name="kortnummer" maxlength="16" minlength="16"
+                    required>
+
+                <label for="name">CVV:</label>
+                <input class="light-pink" type="text" id="CVV" name="CVV" maxlength="3" minlength="3" required>
+
+                <button class="button" type="button"
+                    onclick="alert('Din ordre er bekræftet! Du vil snart modtage en mail, med dit RadarPass. Tak for at du vil være en del af Radars Resonans! Vi glæder os til at se dig!')">BÆKRÆFT
+                    ORDRE</button>
             </div>
         </form>
 
         <!------------------------------------------SIDEBAR------------------------------------------->
-        <section class="boble1 sidebar">
+        <section class="sidebar tlf-none column-pc">
             <div class="sticky">
                 <h3 class="right pc-pink">AKTUELLE EVENTS</h3>
                 <!--Event 1-->
@@ -201,4 +211,5 @@
     </footer>
 
 </body>
+
 </html>
