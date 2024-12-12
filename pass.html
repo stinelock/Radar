@@ -82,7 +82,7 @@
             </div>
         </section>
         <!------------------------------------------PC: VÆLG VARE------------------------------------------->
-        <form action="betaling.html" method="post" class="column-pc tlf-none form top-radius img1">
+        <form action="betaling.html" method="post" class="column-pc tlf-none form top-radius img1" id="myForm">
             <div class="form-content">
                 <label class="form-hd" for="items">Antal varer</label>
                 <div class="vare-antal">
@@ -92,15 +92,15 @@
                 </div>
     
                 <label for="name">Navn:</label>
-                <input class="light-pink" type="text" id="name" name="name" required>
+                <input class="light-pink" type="text" id="name" name="name" placeholder="Fulde Navn" required>
     
                 <label for="birthdate">Fødselsdato:</label>
                 <input class="light-pink" type="date" id="birthdate" name="birthdate" required>
     
                 <label for="email">Email:</label>
-                <input class="light-pink" type="email" id="email" name="email" required>
+                <input class="light-pink" type="email" id="email" name="email" placeholder="fx. jakob.n@gmail.com" required>
     
-                <button class="button" type="submit">Gå til betaling</button>
+                <input class="button" type="submit" value="GÅ TIL BETALING">
             </div>
         </form>
 

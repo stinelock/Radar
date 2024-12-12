@@ -12,6 +12,11 @@ html body {
     overflow-x: hidden;
 }
 
+main {
+    height: 100%;
+    width: 100%;
+}
+
 a {
     text-decoration: none;
 }
@@ -33,6 +38,17 @@ a {
     background-color: rgba(1, 26, 77, 1);
 }
 
+.sticky {
+    position: sticky;
+    top: 106px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.relative {
+    position: relative;
+    right: 0;
+}
 
 /* ----------------------Text CSS -----------------------*/
 /* Futura Bold */
@@ -41,7 +57,7 @@ h1 {
     font-family: "futura-pt-bold", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: clamp(4rem, 10vw, 6rem);
+    font-size: clamp(2.5rem, 10vw, 6rem);
 }
 
 /* Futura Bold */
@@ -413,6 +429,24 @@ li a {
     object-position: 50% 50%;
 }
 
+/*----------------------------GALLERI CSS------------------------------------------------*/
+
+
+
+#del {
+    display: flex;
+    right: 0;
+    border-radius: 500px;
+    padding: 1.5rem 2rem;
+    font-size: 2rem;
+    z-index: 4;
+
+}
+
+.del-minde{
+    margin: 5%;
+}
+
 /* ---------------------------------VÆLG VARER CSS-----------------------------------------*/
 
 .vare-antal {
@@ -446,6 +480,7 @@ li a {
     font-weight: 500;
     font-style: normal;
     font-size: 1rem;
+    padding: 0 1rem;
 }
 
 .form-hd {
@@ -535,7 +570,7 @@ footer {
 }
 
 /* ------------------------------------------------Media queries ------------------------------------------------*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
     .row-pc {
         display: flex;
         flex-direction: row;
@@ -549,6 +584,55 @@ footer {
         justify-content: center;
         align-items: center;
     }
+
+    /* --------------------------------------------- Nav -----------------------------------------------------*/
+    .navigation {
+        align-items: flex-end;
+    }
+
+    .nav-bar {
+        position: relative;
+        transform: none;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        padding-top: 0;
+        padding-bottom: 0;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .nav-cta {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #nav-cta {
+        margin: 5px;
+    }
+
+    .nav-pc-none {
+        display: none;
+    }
+
+    li a {
+        font-size: 1.5rem;
+        margin: 10px;
+        width: fit-content;
+    }
+
+    a {
+        width: fit-content;
+    }
+
 
     /* Grid for index.html */
     .grid-container-index {
@@ -585,9 +669,23 @@ footer {
     .pass {
         grid-template-areas:
             "velkomst velkomst velkomst velkomst sidebar"
-            "text1 text1 img1 img1 sidebar"
+            "sidebar"
             "sponsor sponsor sponsor sponsor sidebar";
         grid-row-gap: 2rem;
+    }
+
+    .minder-grid {
+        grid-template-areas:
+            "velkomst velkomst velkomst velkomst sidebar"
+            "minder minder minder minder sidebar"
+            "sponsor sponsor sponsor sponsor sidebar";
+        grid-row-gap: 2rem;
+        margin-left: 0;
+        grid-column-gap: 0;
+    }
+
+    .minder {
+        grid-area: minder;
     }
 
     .img-frame {
@@ -695,7 +793,7 @@ footer {
         border-bottom-right-radius: 500px;
     }
 
-    .pc-none{
+    .pc-none {
         display: none;
     }
 
@@ -740,6 +838,7 @@ footer {
     }
 
     .sidebar {
+        display: inline;
         grid-area: sidebar;
         width: 100%;
         height: 100%;
@@ -756,13 +855,6 @@ footer {
     /* -----------------------------------------------------Text -----------------------------------------------------*/
     h2 {
         font-size: 5rem;
-    }
-
-    .sticky {
-        position: sticky;
-        top: 106px;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
     }
 
     /* -----------------------------------------------------Events -----------------------------------------------------*/
@@ -788,7 +880,8 @@ footer {
         justify-content: space-around;
         align-items: center;
         width: 100%;
-        padding: 5rem;
+        padding: 2rem;
+        padding-top: 10rem;
         background: linear-gradient(180deg, rgba(255, 178, 233, 1) 0%, rgba(255, 87, 207, 1) 32%, rgba(189, 21, 144, 1) 50%, rgba(121, 9, 157, 1) 100%);
     }
 
@@ -796,6 +889,26 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        width: 100%;
+    }
+
+    .vare-antal {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+    }
+
+    .form-content input {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 50px;
+        margin-bottom: 1rem;
+    }
+
+    .form-content label {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
     }
 
     /* Footer */
@@ -817,53 +930,3 @@ footer {
         flex-direction: row;
     }
 }
-
-@media only screen and (min-width: 992px) {
-    /* --------------------------------------------- Nav -----------------------------------------------------*/
-    .navigation {
-       align-items: flex-end;
-   }
-   
-   .nav-bar {
-       position: relative;
-       transform: none;
-       list-style: none;
-       display: flex;
-       flex-direction: row;
-       justify-content: space-around;
-       align-items: flex-end;
-       padding-top: 0;
-       padding-bottom: 0;
-       width: auto;
-       height: auto;
-       background-color: transparent;
-   }
-   
-   .nav-button {
-       display: none;
-   }
-   
-   .nav-cta {
-       display: flex;
-       flex-direction: row;
-       justify-content: space-around;
-   }
-   
-   #nav-cta {
-       margin: 5px;
-   }
-   
-   .nav-pc-none {
-       display: none;
-   }
-   
-   li a {
-       font-size: 1.5rem;
-       margin: 10px;
-       width: fit-content;
-   }
-   
-   a {
-       width: fit-content;
-   }
-   }
