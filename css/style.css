@@ -312,13 +312,15 @@ li a {
 
 
 .emblem {
-    width: 35%;
+    position: absolute;
+    right: 15%;
+    width: 15%;
     height: auto;
     z-index: 4;
 }
 
 .emblem a {
-    width: 40%;
+    width: 10%;
     height: auto;
 }
 
