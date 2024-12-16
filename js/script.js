@@ -35,7 +35,11 @@ document.getElementById("myPayment").addEventListener("submit", function (event)
 
 
 /*----------------- DEL KOMMENTAR--------------------------- */
-function myFunction() {
-    alert("Succes! Dit billede er delt!");
-    window.location.replace("faellesskab.html");
-}
+document.getElementById("myComment").addEventListener("submit", function (event) {
+    if (!event.target.checkValidity()) {
+        // Hvis formularen ikke er gyldig, vis standard browser-validering
+        return;
+    }
+    event.preventDefault();
+    alert("Din kommentar er sendt! Tak for at du vil dele din mening med os!");
+});
