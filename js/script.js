@@ -29,21 +29,10 @@ function myFunction() {
     window.location.href = 'betaling.html?name=';
 }
 
-/*----------------- Betalingsformular--------------------------- */
-function getQueryParams() {
-    var params = {};
-    var queryString = window.location.search.substring(1);
-    var regex = /([^&=]+)=([^&]*)/g;
-    var match;
-    while (match = regex.exec(queryString)) {
-        params[decodeURIComponent(match[1])] = decodeURIComponent(match[2]);
-    }
-    return params;
-}
 
-document.addEventListener('DOMContentLoaded', function() {
-    var params = getQueryParams();
-    if (document.getElementById('userInfo')) {
-        document.getElementById('userInfo').innerText = 'Navn: ' + params.name + '\nFødselsdato: ' + params.birthdate + '\nEmail: ' + params.email;
-    }
-});
+
+/*----------------- DEL KOMMENTAR--------------------------- */
+function myFunction() {
+    alert("Succes! Dit billede er delt!");
+    window.location.replace("faellesskab.html");
+  }
