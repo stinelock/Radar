@@ -182,7 +182,7 @@ a {
     display: inline-block;
 }
 
-.nav-cta {
+.nav-cta-box {
     display: none;
 }
 
@@ -700,13 +700,13 @@ footer {
         display: none;
     }
 
-    .nav-cta {
+    .nav-cta-box {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
 
-    #nav-cta {
+    .nav-cta {
         margin: 5px;
     }
 
