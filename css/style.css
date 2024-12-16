@@ -53,7 +53,6 @@ h1 {
     font-weight: 700;
     font-style: normal;
     font-size: clamp(2.5rem, 10vw, 6rem);
-    width: 100vw;
 }
 
 /* Futura Bold */
@@ -84,7 +83,7 @@ h4 {
 }
 
 .sub-hd {
-    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-size: clamp(1.5rem, 4vw, 2.75rem);
 }
 
 h5 {
@@ -114,7 +113,7 @@ p {
     font-style: italic;
 }
 
-.overskrift{
+.overskrift {
     width: 100%;
 }
 
@@ -433,7 +432,7 @@ li a {
 }
 
 /*----------------------------SORTHANDSK CSS------------------------------------------------*/
-#event-velkomst{
+#event-velkomst {
     margin: 5%;
 }
 
@@ -570,6 +569,25 @@ label {
     font-size: 1rem;
     color: rgba(1, 26, 77, 1);
     margin-top: 1rem;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.form-content input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+#payment {
+    padding-left: 25%;
+    padding-top: 30%;
 }
 
 /* ---------------------------------FOOTER CSS-----------------------------------------*/
@@ -741,9 +759,10 @@ footer {
     .pass {
         grid-template-areas:
             "velkomst velkomst velkomst velkomst sidebar"
-            "sidebar"
+            "text1 text1 img1 img1 sidebar"
             "sponsor sponsor sponsor sponsor sidebar";
-        grid-row-gap: 2rem;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
     }
 
     .event-info {
@@ -887,6 +906,16 @@ footer {
         display: none;
     }
 
+    /* ------------------------------------------ hover effecter ----------------------------------------------*/
+   li a:hover{
+    text-decoration: underline;
+    transition: ease-in-out 0.5s;
+   }
+   
+    .event-card:hover {
+        color: #08E38F;
+    }
+
     /* ------------------------------------------ Index bubbles ----------------------------------------------*/
     .boble1 {
         background: transparent;
@@ -984,7 +1013,7 @@ footer {
         padding: 1.5rem;
     }
 
-    #publikum{
+    #publikum {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -996,7 +1025,7 @@ footer {
         padding: 10% 10% 30% 10%;
     }
 
-    #vildmed{
+    #vildmed {
         padding-top: 2.5rem;
     }
 
@@ -1037,6 +1066,12 @@ footer {
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
     }
+
+    #payment {
+        padding-left: 0;
+        padding-top: 0;
+    }
+
 
     /* Footer */
     .sponsor {

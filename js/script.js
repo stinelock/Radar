@@ -10,29 +10,32 @@ navBtn.onclick = () => {
 
 
 /* ----------------- Vælg vare--------------------------- */
-document.getElementById('plus').addEventListener('click', function () {
-    var items = document.getElementById('items'); /*definerer items som variabel*/
-    if (items.value < 4) {                          /*kan maks være 4 varer */
-        items.value = parseInt(items.value) + 1;    /*når click bliver antal +1 */
-    }
-});
 
-document.getElementById('minus').addEventListener('click', function () {
-    var items = document.getElementById('items');
-    if (items.value > 1) {
-        items.value = parseInt(items.value) - 1; /*når click bliver antal -1 */
-    }
-});
 
 /*----------------- GÅ TIL BETALING--------------------------- */
-function myFunction() {
-    window.location.href = 'betaling.html?name=';
-}
+document.getElementById("myForm").addEventListener("submit", function (event) {
+    if (!event.target.checkValidity()) {
+        // Hvis formularen ikke er gyldig, vis standard browser-validering
+        return;
+    }
+    event.preventDefault(); // Forhindrer standard formularindsendelse
+    window.location.replace("betaling.html"); // Skifter til batreling.html
+});
 
+/* ----------------- ORDRE BEKRÆFTEGELSE--------------------------- */
+document.getElementById("myPayment").addEventListener("submit", function (event) {
+    if (!event.target.checkValidity()) {
+        // Hvis formularen ikke er gyldig, vis standard browser-validering
+        return;
+    }
+    event.preventDefault();
+    alert("Din ordre er bekræftet! Du vil snart modtage en mail, med dit RadarPass. Tak for at du vil være en del af Radars Resonans! Vi glæder os til at se dig!");
+    window.location.replace= "index.html";
+});
 
 
 /*----------------- DEL KOMMENTAR--------------------------- */
 function myFunction() {
     alert("Succes! Dit billede er delt!");
     window.location.replace("faellesskab.html");
-  }
+}
