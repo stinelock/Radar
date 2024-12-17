@@ -54,24 +54,27 @@
             <img class="sorthandsk" src="img/sorthandsk.pc.jpg" alt="SORTHANDSK">
         </div>
         <!--INFOCARD-->
-        <div class="info-card dark-blue-bg main-text sidebar">
-            <h3 class="pink info-section">SORTHANDSK</h3>
-            <p class="italic pink info-section">INFO</p>
-            <div class="info-section">
-                <p class="pink">DATO</p>
-                <p class=" italic pink">Lørdag 7. december 2024</p>
-            </div>
-            <div class="info-section">
-                <p class="pink">DØRE/KONCERT</p>
-                <p class="italic pink">19:00/20:00</p>
+        <section class="info-card dark-blue-bg main-text sidebar relative-pc">
+            <div class="sticky">
+                <h3 class="pink info-section">SORTHANDSK</h3>
+                <p class="italic pink info-section">INFO</p>
+                <div class="info-section">
+                    <p class="pink">DATO</p>
+                    <p class=" italic pink">Lørdag 7. december 2024</p>
+                </div>
+                <div class="info-section">
+                    <p class="pink">DØRE/KONCERT</p>
+                    <p class="italic pink">19:00/20:00</p>
+                </div>
+
+                <p class="italic pink">RAP/METAL/ROCK</p>
+
+                <a class="button" href="pass.html">
+                    KØB BILLET
+                </a>
             </div>
 
-            <p class="italic pink">RAP/METAL/ROCK</p>
-
-            <a class="button" href="pass.html">
-                KØB BILLET
-            </a>
-        </div>
+        </section>
 
         <!--INFO TIL SORTHANDSK-->
         <div class="boble2 text1 dark-blue-bg" id="info-text">
@@ -126,8 +129,11 @@
         <!--VILD MED SORTHANDSK?-->
         <section class="boble2 text3" id="vildmed">
             <h3 class="left sub-hd">VILD MED SORTHANDSK?</h3>
-            <form id="myComment">
-                <label class="form-hd">Så del din glæde for dem her!</label>
+            <p class="main-text">Så del din glæde for dem her!</p>
+            <form class="column form-content" id="myComment">
+                <label for="name">Navn:</label>
+                <input class="light-pink" type="text" id="name" name="name" placeholder="Fulde Navn" required>
+                <label>Din oplevelse:</label>
                 <textarea class="light-pink" name="kommentar" maxlength="250" placeholder="Max 250 tegn"
                     required></textarea>
                 <input class="button" type="submit" value="SEND">

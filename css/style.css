@@ -10,7 +10,7 @@ html body {
     margin: 0;
     background: linear-gradient(180deg, rgba(255, 87, 207, 1) 0%, rgba(189, 21, 144, 1) 16%, rgba(121, 9, 157, 1) 67%, rgba(1, 43, 127, 1) 100%);
     background-repeat: no-repeat;
-    overflow-x: hidden;
+  
 }
 
 main {
@@ -576,7 +576,7 @@ label {
 }
 
 .form-content input {
-    width: 100%;
+    width: 80%;
     padding: 1rem;
     border-radius: 50px;
     margin-bottom: 1rem;
@@ -962,7 +962,6 @@ footer {
         background-color: rgba(1, 26, 77, 0.8);
         justify-content: flex-start;
         padding: 2rem;
-        overflow-x: hidden;
     }
 
     .line-pink {
@@ -972,8 +971,7 @@ footer {
     .sticky {
         position: sticky;
         top: 106px;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        height: fit-content;
     }
 
     /* -----------------------------------------------------TEXT -----------------------------------------------------*/
@@ -1049,7 +1047,7 @@ footer {
     }
 
     .form-content input {
-        width: 100%;
+        width: 80%;
         padding: 1rem;
         border-radius: 50px;
         margin-bottom: 1rem;
